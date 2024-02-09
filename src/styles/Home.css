@@ -1,0 +1,400 @@
+*, *::before, *::after {
+  box-sizing : inherit;
+  margin: 0;
+  padding: 0;
+}
+html {
+  height: auto;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+body {
+  min-height: 100vh;
+}
+main {
+  display: grid;
+  grid-template-rows: 785px 785px 380px 380px 900px 340px;
+  height: 100%;
+  position: relative;
+}
+.navigation-bar {
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  position: absolute;
+
+  height: 100px;
+  width: 100vw;
+
+  z-index: 1;
+
+}
+
+.logo { 
+
+  color: transparent;
+  margin-left: 4rem;
+  font-family: "Lot"; 
+  font-size: 35px;
+
+  height: fit-content;
+
+  -webkit-text-stroke: 3px black;
+
+}
+
+.navigation-bar > ul {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3.5rem;
+
+  font-family: var(--lato);
+  font-weight: bold;
+  font-size: 16px;
+
+  list-style-type: none;
+
+  text-transform: uppercase;
+
+  height: fit-content;
+
+  margin-right: 17rem;
+
+}
+
+.navigation-bar li { 
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  transition: all 0.2s;
+
+}
+
+.navigation-bar li:hover {
+
+  cursor: pointer;
+  color: #555;
+
+}
+
+.cart-item-count {
+
+  background-color: black; 
+  width: 20px; 
+  height: 20px; 
+  border-radius: 100%; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  color: white; 
+  font-family:var(--lato); 
+  font-size: 11px;
+
+}
+
+.theme-toggle-container {
+
+  height: 28px; 
+  width: 28px; 
+  background-color: transparent; 
+  border: 2px black solid; 
+  border-radius: 100%;
+}
+.layout__header {
+  background-image: url("https://i.imgur.com/mOMAFMf.jpeg");
+  background-size: cover;
+  background-position: top center;
+  position: relative;
+}
+.header__container {
+  position: relative;
+  left: 5%;
+  top: 215px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: fit-content;
+  width: fit-content;
+}
+.header__container > h1 {
+  font-family: "Smooth Fantasy";
+  font-size: 74px;
+  color: rgb(224, 122, 95);
+  text-shadow: 7px 0px 2px rgba(224, 122, 95, 0.6);
+}
+.header__container > h2 {
+  font-family: "Ananias";
+  font-size: 2.5rem;
+  color: #9a421a;
+}
+.layout__best {
+  background-color: #f4f1de;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+.layout__best > h1 {
+  text-transform: uppercase;
+  font-family: var(--leagueSpartan);
+  font-weight: bolder;
+  font-size: 55px;
+}
+.bestItems__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  height: fit-content;
+  gap: 4rem;
+}
+.layout__best > a {
+  position: relative;
+  font-family: var(--lato);
+  font-weight: 300;
+  font-size: 0.9rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+.layout__best > a::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: -3rem;
+  content: url("../assets/stroke-left.svg");
+}
+.layout__best > a::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: -3rem;
+  content: url("../assets/stroke-right.svg");
+}
+.layout__achievements {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("https://i.imgur.com/IHl6KYo.jpeg");
+  background-size: cover;
+  background-position: center top;
+  background-attachment: fixed;
+}
+.achievements-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  width: fit-content;
+  height: 60%;
+  gap: 1rem;
+}
+.achievements {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 315px;
+  height: 100%;
+  backdrop-filter: brightness(68%);
+}
+.achievements > h1 {
+  color: white;
+  font-family: var(--leagueSpartan);
+  font-size: 6rem;
+}
+.achievements > h2 {
+  color: #F2CC8F;
+  font-family: var(--leagueSpartan);
+  font-size: 2.5rem;
+  white-space: nowrap;
+}
+.layout__years {
+  position: relative;
+  background-color: #e07a5f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+.years-rectangle {
+  position: absolute;
+  height: 25px;
+  width: 600px;
+  transform: rotate(-45deg);
+}
+.rect-1 {
+  left: -225px; top: 0; background-color: #F4F1DE;
+}
+.rect-2 {
+  left: -175px; top: 0; background-color: #F2CC8F;
+}
+.rect-3 {
+  left: -125px; top: 0; background-color: #F4F1DE;
+}
+.rect-4 {
+  right: -225px; bottom: 0; background-color: #F2CC8F;
+}
+.rect-5 {
+  right: -175px; bottom: 0; background-color: #F4F1DE;
+}
+.rect-6 {
+  right: -125px; bottom: 0; background-color: #F2CC8F;
+}
+.popsicle {
+  content: url("../assets/popsicle.svg");
+  right: 215px; bottom: -50px;
+}
+.ice-cream {
+  content: url("../assets/ice-cream-cone.svg");
+  left: 100px; bottom: -80px;
+}
+.layout__years > h1 {
+  font-family: var(--leagueSpartan);
+  font-weight: 900;
+  font-size: 86px;
+  color: #F4F1DE;
+  text-transform: uppercase;
+}
+.layout__years > h2 {
+  font-family: var(--leagueSpartan);
+  font-weight: 800;
+  font-size: 28px;
+  letter-spacing: 9px;
+  color: #F2CC8F;
+  text-transform: uppercase;
+}
+.layout__years > img {
+  position: absolute;
+}
+.layout__crave {
+  background-color: #f4f1de;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+.layout__crave > h1 {
+  font-family: 'Smooth Fantasy';
+  font-size: 3rem;
+}
+.crave-container {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  width: 90%;
+  height: 60%;
+}
+.cravings {
+  border: 5px #e1dbb9 solid;
+  border-radius: 5px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.cravings > h1 {
+  font-family: var(--leagueSpartan);
+  font-size: 3.5rem;
+  margin-right: 4rem;
+}
+.cravings-featured {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cravings-featured > div {
+  background-color: #f0e7aa;
+  width: 450px;
+  height: 450px;
+}
+.layout__newsletter {
+  background-color: #F2CC8F;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.layout__newsletter > h1 {
+  font-family: var(--leagueSpartan);
+  font-weight: 900;
+  font-size: 72px;
+  text-transform: uppercase;
+  letter-spacing: 0px;
+  line-height: 70px;
+  position: relative;
+}
+.layout__newsletter > h1::after {
+  position: absolute;
+  top: 30px;
+  content: url('../assets/arrow.svg');
+  margin-left: 10px;
+}
+.newsletter-container {
+  height: 140px;
+  width: 700px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-left: 5rem;
+}
+.newsletter-container > h3 {
+  font-family: var(--leagueSpartan);
+  font-weight: 400;
+  letter-spacing: 4px;
+  margin-left: 2px;
+}
+.newsletter-container > form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.newsletter-container > form input {
+  width: 417px;
+  height: 43px;
+  border: 4px white solid;
+  outline: none;
+  background-color: #F2CC8F;
+  font-family: var(--leagueSpartan);
+  font-size: 16px;
+  padding: 0 0.5rem;
+}
+.newsletter-container > form input:focus {
+  color: black;
+  background-color: white;
+  content: '';
+}
+.newsletter-container > form input::-moz-placeholder {
+  color: black;
+  font-family: var(--leagueSpartan);
+  font-weight: bold;
+  font-size: 16px;
+  letter-spacing: 2px;
+}
+.newsletter-container > form button {
+  color: white;
+  width: 140px;
+  height: 43px;
+  border-radius: 0;
+  border: 1px black solid;
+  background-color: black;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.newsletter-container > p {
+  font-family: var(--lato);
+  letter-spacing: 4px;
+  font-style: italic;
+  margin-left: 2px;
+}

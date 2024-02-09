@@ -1,0 +1,91 @@
+.best-item {
+    display: grid;
+    grid-template-rows: 85% 15%;
+    height: 400px;
+    width: 300px;
+    border: 1px gray solid;
+}
+#chocolate > .best-item-image {
+background-image: url("https://iambaker.net/wp-content/uploads/2022/06/chocolate-ice-cream.jpg");
+background-size: 200%;
+background-position: center;
+}
+#cookies-and-cream > .best-item-image {
+background-image: url("https://sugarspunrun.com/wp-content/uploads/2023/08/Cookies-and-cream-ice-cream-3-of-8.jpg");
+background-size: 125%;
+background-position: center;
+}
+#strawberry > .best-item-image {
+background-image: url("https://www.livinglou.com/wp-content/uploads/2013/06/the-best-homemade-strawberry-ice-cream.jpg");
+background-size: cover;
+background-position: center;
+}
+#melon > .best-item-image {
+background-image: url("https://i.imgur.com/tET6wVo.jpg");
+background-size: 175%;
+background-position: 66%;
+}
+#buko > .best-item-image {
+background-image: url("https://www.thedailymeal.com/img/gallery/the-super-simple-ice-cream-scooping-tip-you-need-to-remember/let-the-ice-cream-warm-up-slightly-before-scooping-1689968320.jpg");
+background-size: cover;
+background-position: left;
+}
+#buko-pandan > .best-item-image {
+background-image: url("https://sugaryums.com/wp-content/uploads/2023/05/Pandan-Ice-Cream-Recipe-SugarYums-11.jpg");
+background-size: 200%;
+background-position: 20% 80%;
+}
+#ube > .best-item-image {
+background-image: url("https://foodtasia.com/wp-content/uploads/2021/09/ube-ice-cream-13.jpg");
+background-size: cover;
+background-position: center;
+}
+#langka > .best-item-image {
+background-image: url("https://s.yimg.com/ny/api/res/1.2/byX_Vxwgkf0HwUYZvYV2Aw--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD02NzU-/https://media.zenfs.com/en/the_daily_meal_185/1b11ad853b4f2a9cc9dc6ca3d4c43c68");
+background-size: 205%;
+background-position: 70%;
+}
+#mango > .best-item-image {
+background-image: url("https://shivanilovesfood.com/wp-content/uploads/2023/06/Mango-Ice-Cream-8.jpg");
+background-size: 115%;
+background-position: center 25%;
+}
+#macapuno > .best-item-image {
+background-image: url("https://f90a7d8c.rocketcdn.me/wp-content/uploads/2023/03/Coconut-milk-ic-scoop.jpg");
+background-size: cover;
+background-position: center;
+}
+#avocado > .best-item-image {
+background-image: url("https://thebigmansworld.com/wp-content/uploads/2022/06/avocado-ice-cream-recipe.jpg");
+background-size: cover;
+background-position: center;
+}
+#cheese > .best-item-image {
+background-image: url("https://www.creationsbykara.com/wp-content/uploads/2021/05/Cheesecake-Ice-Cream-9-2.jpg");
+background-size: cover;
+background-position: center;
+}
+.best-item-bottom-portion {
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 1rem;
+}
+.regular{ background-color: snow; }
+.best-seller{ background-color: var(--accent);}
+.best-item-name {
+font-family: var(--leagueSpartan);
+font-weight: 400;
+font-size: 0.9rem;
+letter-spacing: 2px;
+color: black;
+}
+.best-item-button {
+padding: 0.3rem 1rem;
+font-size: 0.9rem;
+font-family: var(--leagueSpartan);
+font-weight: 900;
+border: 3px black solid;
+background-color: transparent;
+letter-spacing: 2px;
+}

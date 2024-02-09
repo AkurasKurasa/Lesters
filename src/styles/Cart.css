@@ -1,0 +1,196 @@
+html {
+    height: auto;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+body {
+    min-height: 100vh;
+    background-color: var(--primary);
+}
+main {
+    display: grid;
+    grid-template-rows: 1100px;
+    height: 100%;
+    position: relative;
+}
+input {
+    border-radius: 0;
+    border: 1px #868686 solid;
+    height: 35px;
+    padding: 0.5rem;
+    font-size: 12px;
+    font-family: var(--lato);
+}
+input::placeholder, textarea::placeholder { 
+    font-weight: 700; 
+    font-family: var(--lato);
+    font-size: 12px;
+}
+.layout_cart {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+.layout_cart > h1 {
+    font-family: var(--leagueSpartan);
+    font-size: 48px;
+    font-weight: 900;
+    letter-spacing: 5px;
+    margin-top: 5rem;
+    margin-bottom: 7rem;
+}
+.cart-form-container {
+    width: 1270px;
+    height: 681px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.cart-container {
+    width: 657px;
+    height: inherit;
+    /* border: 1px red solid; */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-shrink: 0;
+    gap: 1rem;
+    overflow: scroll;
+}
+.cart-container {
+    overflow-y: scroll;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+}
+.cart-container::-webkit-scrollbar { /* WebKit */
+    width: 0;
+    height: 0;
+}
+.cart-item {
+    width: inherit;
+    min-height: 75px;
+    background-color: var(--primary_light_contrast);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: relative;
+
+    padding: 0.5rem 1rem 0.5rem 2rem;
+}
+.cart-item > h1 {
+    width: auto;
+    height: auto;
+    max-width: 171px;
+    max-height: 37px;
+
+    font-family: var(--lato);
+    font-weight: 400;
+    font-size: 16px;
+
+    color: #4E4D4D;
+
+    letter-spacing: 4px;
+}
+.cart-item > h2 {
+    position: absolute;
+    left: 35%;
+
+    font-family: var(--lato);
+    font-weight: 900;
+    font-size: 16px;
+    color: black;
+
+    letter-spacing: 2px;
+    
+}
+.cart-item > span {
+    font-family: var(--lexend);
+    font-weight: 200;
+    font-size: 19px;
+    color: #A59E9E;
+}
+.form-container {
+    width: 581px;
+    height: inherit;
+    border: 1px black solid;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 3rem 1rem;
+}
+.form-container > h3 {
+    font-family: var(--lato);
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 3px;
+    color: #868686;
+    margin-bottom: 2rem;
+}
+.shipping-container {
+    width: 482px;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.5rem;
+
+}
+.payment-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.input-container {
+    width: 482px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.id-container {
+    height: auto;
+    width: 482px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    font-family: var(--lato);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #7D7D7D;
+
+    padding-left: 0.2rem;
+}
+.form-submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: var(--leagueSpartan);
+    font-weight: 800;
+    font-size: 18px;
+
+    letter-spacing: 2px;
+
+    border: 4px black solid;
+    height: 50px;
+    width: 140px;
+
+    background-color: transparent;
+    margin-top: 3rem;
+
+}
