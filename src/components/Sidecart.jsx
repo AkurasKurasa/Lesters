@@ -7,9 +7,19 @@ const Sidecart = forwardRef( (props, ref) => {
 
     useImperativeHandle(ref, () => ({
 
-        talk() {
+        toggle() {
             const sidecart = document.querySelector(".sidecart")
             sidecart.style.transform = "translateX(0%)";
+
+            let handler = (event) => {
+                if ( !(event.composedPath().includes(sidecart)) ) {
+                    sidecart.style.transform = "translateX(100%)"
+                    console.log("still works")
+                    document.removeEventListener("mousedown", handler)
+                }
+            }
+    
+            document.addEventListener("mousedown", handler)
         }
 
     }))
