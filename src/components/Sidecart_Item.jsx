@@ -1,0 +1,30 @@
+import { forwardRef, useEffect, useLayoutEffect, useState } from "react"
+import "../components/Sidecart_Item.css"
+
+function Sidecart_Item (props) {
+
+    const [ isSelected, setIsSelected ] = useState(false);
+
+    useEffect(() => {
+        (isSelected) ? props.remove(props.name) : props.add(props.name)
+    }, [isSelected])
+
+    return (
+
+        <div className='item-container'>
+                    <div className='item-info-container'>
+                        <span></span>
+                        <h1>{props.name}</h1>
+                        <h2 className="item-price">{props.price}</h2>
+                        <div 
+                        className={ isSelected ? 'item-selected' : 'item-select' }
+                        onClick={ () => { setIsSelected(!isSelected) } }>
+                        </div>
+                    </div>
+        </div>
+
+    )
+
+} 
+
+export default Sidecart_Item
