@@ -4,8 +4,8 @@ import { forwardRef, useEffect, useImperativeHandle, useRef, useState } from 're
 
 const Sidecart = forwardRef( (props, ref) => {
     
-    const [ productList, setProductList ] = useState([{ name: "Cookies", price: "1000.00", hide: false }, { name: "Cream", price: "2000.00", hide: false}, { name: "Crum", price: "2000.00", hide: false}]);
-    const [ updatedList, setUpdatedList ] = useState([{ name: "Cookies", price: "1000.00", hide: false }, { name: "Cream", price: "2000.00", hide: false}, { name: "Crum", price: "2000.00", hide: false}])
+    const [ productList, setProductList ] = useState([{ name: "COOKIES & CREAM", price: "₱1000.00", hide: false }, { name: "CHOCOLATE", price: "₱2000.00", hide: false}, { name: "CHEESE", price: "₱2000.00", hide: false}]);
+    const [ updatedList, setUpdatedList ] = useState(productList)
 
     useImperativeHandle(ref, () => ({
 
@@ -25,22 +25,19 @@ const Sidecart = forwardRef( (props, ref) => {
 
     }))
 
+    // fix implementation; bad pattern
     function handleListRemove(name) {
         
         const list = updatedList.filter( (product) => { return product.name == name })
         list[0].hide = true;
 
-        console.log(list)
-
     }
 
+    // fix implementation; bad pattern
     function handleListAdd(name) {
         
         const list = updatedList.filter( (product) => { return product.name == name })
-        list[0].hide = false;
-
-        console.log(list)
-        
+        list[0].hide = false;        
 
     }
 
@@ -57,7 +54,7 @@ const Sidecart = forwardRef( (props, ref) => {
             <h1>CART</h1>
 
             <div className='items-container'>
-                { productList.map( (product, index) => <Sidecart_Item key={index} id={index} name={product.name} price={product.price} add={handleListAdd} remove={handleListRemove} />  ) }
+                { productList.map( (product, index) => <Sidecart_Item key={product.name} id={index} name={product.name} price={product.price} add={handleListAdd} remove={handleListRemove} />  ) }
             </div>
 
             <div className='control-container'>

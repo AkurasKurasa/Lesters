@@ -1,15 +1,18 @@
-import Navbar from '../components/Navbar.jsx'
+import NavBar from '../components/Navbar.jsx'
 import Footer from '../components/Footer.jsx'
 import Sidecart from '../components/Sidecart.jsx'
 
 import '../styles/Cart.css'
+import { useRef } from 'react'
 
 function Cart() {
 
+    const sidecartRef = useRef()
+
     return (
         <>
-            <Navbar />
-            <Sidecart />
+            <NavBar reference={sidecartRef} />
+            <Sidecart ref={sidecartRef} />
 
             <main>
                 <section className='layout_cart'>

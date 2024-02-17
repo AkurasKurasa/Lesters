@@ -3,12 +3,18 @@ import NavBar from '../components/Navbar.jsx'
 import Card from '../components/Card.jsx'
 import Footer from '../components/Footer.jsx'
 
+import { useRef } from 'react'
+import Sidecart from '../components/Sidecart.jsx'
+
 function Flavors() {
+
+  const sidecartRef = useRef()
 
   return (
     <>
     
-      <NavBar />
+      <NavBar reference={sidecartRef} />
+      <Sidecart ref={sidecartRef} />
 
       <main>
         <Menu />

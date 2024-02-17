@@ -1,13 +1,18 @@
-import Navbar from '../components/Navbar.jsx'
 import Footer from '../components/Footer.jsx'
+import NavBar from '../components/Navbar.jsx'
+import Sidecart from '../components/Sidecart.jsx'
 
 import '../styles/Contact.css'
+import { useRef } from 'react'
 
 function Contact() {
 
+    const sidecartRef = useRef();
+
     return (
         <>
-            <Navbar />
+            <NavBar reference={sidecartRef} />
+            <Sidecart ref={sidecartRef} />
 
             <main>
 
