@@ -28,7 +28,7 @@ const Sidecart = forwardRef( (props, ref) => {
     // fix implementation; bad pattern
     function handleListRemove(name) {
         
-        const list = updatedList.filter( (product) => { return product.name == name })
+        const list = updatedList.filter( (product) => { return product.name == name } )
         list[0].hide = true;
 
     }
@@ -37,8 +37,8 @@ const Sidecart = forwardRef( (props, ref) => {
     function handleListAdd(name) {
         
         const list = updatedList.filter( (product) => { return product.name == name })
-        list[0].hide = false;        
-
+        list[0].hide = false;  
+        
     }
 
     function removeItems() {
@@ -61,6 +61,8 @@ const Sidecart = forwardRef( (props, ref) => {
                 <button className="cart-checkout">CHECKOUT</button>
                 <span className='delete-items' onClick={removeItems}></span>
             </div>
+
+            
         </section>
 
     )

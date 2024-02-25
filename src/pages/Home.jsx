@@ -3,6 +3,7 @@ import { useRef } from 'react'
 import Card from '../components/Card.jsx'
 import Footer from '../components/Footer.jsx'
 import Sidecart from '../components/Sidecart.jsx'
+import ProductModal from '../components/ProductModal.jsx'
 
 function Home() {
 
@@ -10,10 +11,11 @@ function Home() {
 
   return (
     <>
+
       <Sidecart ref={sidecartRef}/>
       <main>
         <Highlight reference={sidecartRef} />
-        <Best />
+        <Best/>
         <Achievements />
         <Years />
         <Crave />
@@ -59,7 +61,7 @@ function Highlight(props) {
 
 }
 
-function Best() {
+function Best(props) {
 
   return (
 
@@ -149,6 +151,11 @@ function Years() {
 
 function Crave() {
 
+  const refreshFlavor = (type) => {
+    const featured = document.getElementById("featured-flavor")
+    featured.textContent = type
+  }
+
   return (
 
     <section className="layout__crave">
@@ -159,16 +166,16 @@ function Crave() {
 
           <section className="cravings">
 
-            <h1>Something <i>exotic</i>? </h1>
-            <h1>Something <i>random?</i> </h1>
-            <h1>Something <i>nostalgic?</i> </h1>
-            <h1>Something <i>tropical?</i> </h1>
-            <h1>Something <i>classic?</i> </h1>
+            <h1 onMouseEnter={() => refreshFlavor("exotic")}>Something <i>exotic</i>? </h1>
+            <h1 onMouseEnter={() => refreshFlavor("random")}>Something <i>random?</i> </h1>
+            <h1 onMouseEnter={() => refreshFlavor("nostalgic")}>Something <i>nostalgic?</i> </h1>
+            <h1 onMouseEnter={() => refreshFlavor("tropical")}>Something <i>tropical?</i> </h1>
+            <h1 onMouseEnter={() => refreshFlavor("classic")}>Something <i>classic?</i> </h1>
 
           </section>
 
           <section className="cravings-featured">
-            <div></div>
+            <div id='featured-flavor'></div>
           </section>
 
         </div>

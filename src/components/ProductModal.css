@@ -1,0 +1,217 @@
+button {
+
+    border: none;
+    outline: none;
+
+}
+
+.overlay {
+
+    width: 100vw;
+    height: 100vh;
+
+    background-color: rgb(99,99,99, 0.7);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    z-index: 10;
+
+}
+
+.modal {
+
+    position: relative;
+    top: calc(50% - (720px / 2));
+    left: calc(50% - (1200px / 2));
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    border: 1px black solid;
+
+    background-color: snow;
+
+    height: 720px;
+    width: 1200px;
+
+    padding: 5rem 4rem;
+
+    /* box-shadow: 0px 0px 500px 5px rgba(0,0,0,0.75); */
+
+    z-index: 6;
+
+    transition: all 0.5s;
+
+}
+
+.modal-images {
+
+    background-image: url("https://sugarspunrun.com/wp-content/uploads/2023/08/Cookies-and-cream-ice-cream-3-of-8.jpg");
+    background-position: center;
+    background-size: cover;
+
+}
+
+.modal-info {
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+
+    padding-left: 3rem;
+    
+}
+
+.product-name {
+
+    font-family: var(--leagueSpartan);
+    font-size: 48px;
+    font-weight: 900;
+    letter-spacing: 5px;
+
+    white-space: nowrap;
+
+}
+
+.product-info {
+
+    font-family: var(--lato);
+    font-size: 16px;
+    font-weight: 400;
+    color: #868686;
+
+    text-align: justify;
+
+    line-height: 28px;
+    margin-bottom: 1rem;
+
+}
+
+.product-price {
+
+    font-family: var(--lato);
+    font-size: 22px;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+.controls-container {
+    height: 56px;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.5rem;
+
+    margin-top: 5rem;
+
+}
+
+.quantity-input {
+
+    width: 133px;
+    height: 56px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: var(--lato);
+    font-size: 16px;
+    font-weight: 300;
+
+    position: relative;
+
+    border: 1px black solid;
+
+}
+
+.quantity-input > span {
+
+    font-family: var(--lato);
+    font-size: 18px;    
+    color: #868686;
+
+}
+
+.quantity-increase {
+
+    position: absolute;
+    right: 10%;
+
+}
+
+.quantity-decrease {
+
+    position: absolute;
+    left: 10%;
+
+}
+
+.controls-container > button {
+
+    height: fit-content;
+    padding: 0.5rem;
+
+}
+
+.add-to-cart-btn {
+
+    background-color: black;
+
+    border: 2px black solid;
+
+    
+    font-family: var(--leagueSpartan);
+    font-size: 16px;
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    color: white;
+
+    width: 130px;
+
+    margin-left: 0.5rem;
+
+}
+
+.order-btn {
+
+    background-color: transparent;
+
+    border: 2px black solid;
+    
+    font-family: var(--leagueSpartan);
+    font-size: 16px;
+    font-weight: 800;
+
+    width: 85px;
+
+    letter-spacing: 1px;
+
+    color: black;
+
+}
+
+.order-price {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: var(--lato);
+    font-size: 20px;
+    font-weight: 400;
+
+    width: 133px;
+
+    margin-top: 0.5rem;
+
+    letter-spacing: 2px;
+
+}

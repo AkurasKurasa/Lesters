@@ -5,6 +5,7 @@ import Footer from '../components/Footer.jsx'
 
 import { useRef } from 'react'
 import Sidecart from '../components/Sidecart.jsx'
+import ProductModal from '../components/ProductModal.jsx'
 
 function Flavors() {
 

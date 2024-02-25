@@ -304,6 +304,7 @@ main {
   font-family: var(--leagueSpartan);
   font-size: 3.5rem;
   margin-right: 4rem;
+  cursor: pointer;
 }
 .cravings-featured {
   display: flex;
