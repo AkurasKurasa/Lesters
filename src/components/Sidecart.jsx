@@ -3,10 +3,8 @@ import Sidecart_Item from './Sidecart_Item';
 import { forwardRef, useEffect, useImperativeHandle, useRef, useState } from 'react';
 
 const Sidecart = forwardRef( (props, ref) => {
-    
-    const [ productList, setProductList ] = useState([{ name: "COOKIES & CREAM", price: "₱1000.00", hide: false }, { name: "CHOCOLATE", price: "₱2000.00", hide: false}, { name: "CHEESE", price: "₱2000.00", hide: false}]);
-    const [ updatedList, setUpdatedList ] = useState(productList)
 
+    
     useImperativeHandle(ref, () => ({
 
         toggle() {
@@ -24,29 +22,6 @@ const Sidecart = forwardRef( (props, ref) => {
         }
 
     }))
-
-    // fix implementation; bad pattern
-    function handleListRemove(name) {
-        
-        const list = updatedList.filter( (product) => { return product.name == name } )
-        list[0].hide = true;
-
-    }
-
-    // fix implementation; bad pattern
-    function handleListAdd(name) {
-        
-        const list = updatedList.filter( (product) => { return product.name == name })
-        list[0].hide = false;  
-        
-    }
-
-    function removeItems() {
-
-        const list = updatedList.filter( (product) => { return product.hide == false })
-        setProductList(list)
-
-    }
     
     return (
 
@@ -54,7 +29,7 @@ const Sidecart = forwardRef( (props, ref) => {
             <h1>CART</h1>
 
             <div className='items-container'>
-                { productList.map( (product, index) => <Sidecart_Item key={product.name} id={index} name={product.name} price={product.price} add={handleListAdd} remove={handleListRemove} />  ) }
+                { productList.map( (product, index) => <Sidecart_Item key={product.name} id={index} name={product.name} price={product.price}  /> ) }
             </div>
 
             <div className='control-container'>
