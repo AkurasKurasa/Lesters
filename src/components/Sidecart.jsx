@@ -24,14 +24,22 @@ const Sidecart = forwardRef( (props, ref) => {
             document.addEventListener("mousedown", handler)
         }
 
-
     }))
 
-    function addItemToCart(name, price) { 
-        const new_temporary_list = temporaryList
+    // fix implementation; bad pattern
+    function handleListRemove(name) {
+        
+        const list = updatedList.filter( (product) => { return product.name == name } )
+        list[0].hide = true;
 
-        if ( !new_temporary_list.includes( new_temporary_list.find( p => p.name === name ) ) ) new_temporary_list.push({name: name, price: price})
-        setTemporaryList(new_temporary_list)
+    }
+
+    // fix implementation; bad pattern
+    function handleListAdd(name) {
+        
+        const list = updatedList.filter( (product) => { return product.name == name })
+        list[0].hide = false;  
+        
     }
 
     function removeItemFromCart(name) { 
@@ -45,14 +53,7 @@ const Sidecart = forwardRef( (props, ref) => {
             <h1>CART</h1>
 
             <div className='items-container'>
-                { productList.map( (product, index) => <Sidecart_Item key={product.name} 
-                                                                    id={index} 
-                                                                    name={product.name} 
-                                                                    price={product.price} 
-                                                                    add={addItemToCart} 
-                                                                    remove={removeItemFromCart} 
-                                                                    /> ) 
-                }
+                { productList.map( (product, index) => <Sidecart_Item key={product.name} id={index} name={product.name} price={product.price} add={handleListAdd} remove={handleListRemove} />  ) }
             </div>
 
             <div className='control-container'>
