@@ -6,6 +6,7 @@ import { CartContext } from '../pages/App';
 const Sidecart = forwardRef( (props, ref) => {
     
     const [ productList, setProductList ] = useContext(CartContext)
+    const [ temporaryList, setTemporaryList ] = useState(productList)
 
     useImperativeHandle(ref, () => ({
 
@@ -23,7 +24,20 @@ const Sidecart = forwardRef( (props, ref) => {
             document.addEventListener("mousedown", handler)
         }
 
+
     }))
+
+    function addItemToCart(name, price) { 
+        const new_temporary_list = temporaryList
+
+        if ( !new_temporary_list.includes( new_temporary_list.find( p => p.name === name ) ) ) new_temporary_list.push({name: name, price: price})
+        setTemporaryList(new_temporary_list)
+    }
+
+    function removeItemFromCart(name) { 
+        const filtered_items = temporaryList.filter((product) => { if ( product.name != name ) return product })
+        setTemporaryList(filtered_items)
+    }
 
     return (
 
@@ -31,12 +45,19 @@ const Sidecart = forwardRef( (props, ref) => {
             <h1>CART</h1>
 
             <div className='items-container'>
-                { productList }
+                { productList.map( (product, index) => <Sidecart_Item key={product.name} 
+                                                                    id={index} 
+                                                                    name={product.name} 
+                                                                    price={product.price} 
+                                                                    add={addItemToCart} 
+                                                                    remove={removeItemFromCart} 
+                                                                    /> ) 
+                }
             </div>
 
             <div className='control-container'>
                 <button className="cart-checkout">CHECKOUT</button>
-                <span className='delete-items' onClick={removeItems}></span>
+                <span className='delete-items' onClick={() => setProductList(temporaryList)}></span>
             </div>
 
             

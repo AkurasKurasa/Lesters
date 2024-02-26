@@ -5,8 +5,8 @@ function Sidecart_Item (props) {
 
     const [ isSelected, setIsSelected ] = useState(false);
 
-    useEffect(() => {
-        (isSelected) ? props.remove(props.name) : props.add(props.name)
+    useLayoutEffect(() => {
+        (isSelected) ? props.remove(props.name) : props.add(props.name, props.price)
     }, [isSelected])
 
     return (
