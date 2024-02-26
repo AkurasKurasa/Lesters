@@ -5,7 +5,7 @@ export const CartContext = createContext([]);
 
 function App() { 
 
-    const [cart, setCart] = useState(new Map([]));
+    const [cart, setCart] = useState([]);
 
     return (
         <>

@@ -26,6 +26,12 @@ const Sidecart = forwardRef( (props, ref) => {
 
     }))
 
+    function addItemToCart(name, price) { 
+        const new_temporary_list = temporaryList
+        if ( !new_temporary_list.includes( new_temporary_list.find( p => p.name === name ) ) ) new_temporary_list.push({name: name, price: price})
+        setTemporaryList(new_temporary_list)
+    }
+
     function removeItemFromCart(name) { 
         const filtered_items = temporaryList.filter((product) => { if ( product.name != name ) return product })
         setTemporaryList(filtered_items)
@@ -37,7 +43,13 @@ const Sidecart = forwardRef( (props, ref) => {
             <h1>CART</h1>
 
             <div className='items-container'>
-                { productList.map( (product, index) => <Sidecart_Item key={product.name} id={index} name={product.name} price={product.price} add={handleListAdd} remove={handleListRemove} />  ) }
+                { productList.map( (product, index) => <Sidecart_Item key={product.name} 
+                                                                        id={index} 
+                                                                        name={product.name} 
+                                                                        price={product.price} 
+                                                                        add={addItemToCart} 
+                                                                        remove={removeItemFromCart} />  
+                ) }            
             </div>
 
             <div className='control-container'>
