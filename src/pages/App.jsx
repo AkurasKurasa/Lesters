@@ -1,7 +1,7 @@
 import { createContext, useState } from "react"
 import Home from "./Home.jsx"
 
-const CartContext = createContext([]);
+export const CartContext = createContext([]);
 
 function App() { 
 
