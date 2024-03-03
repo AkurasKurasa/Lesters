@@ -14,7 +14,7 @@ function Card(props) {
 
     return (
         <>
-          { isPressed && <ProductModal toggle={toggle} name={props.name} /> }
+          { isPressed && <ProductModal toggle={toggle} name={props.name} image={props.image} /> }
           <article className="best-item" id={props.id}>
               <section className="best-item-image"></section>
                 <section className="best-item-bottom-portion regular">

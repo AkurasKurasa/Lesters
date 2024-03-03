@@ -1,7 +1,10 @@
-import { forwardRef, useImperativeHandle, useState } from 'react'
+import { forwardRef, useContext, useImperativeHandle, useState } from 'react'
+import { CartContext } from '../pages/App'
 import './ProductModal.css'
 
 const ProductModal = forwardRef((props, ref) => { 
+
+    const [ cartItems, setCartItems ] = useContext(CartContext)
 
     return (
 
@@ -14,7 +17,7 @@ const ProductModal = forwardRef((props, ref) => {
 
         }}>
           <div className="modal">
-              <section className='modal-images'></section>
+              <section className='modal-images' style={ {backgroundImage: `url('${props.image}')` } }></section>
               <section className='modal-info'>
                   <h1 className='product-name'>{props.name}</h1>
                   <p className='product-info'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu elit sed ligula pulvinar semper. Donec imperdiet bibendum mi, ut accumsan lorem  bibendum id. Ut sed metus et nisi vehicula cursus at eu erat. Suspendisse potenti. Vivamus neque risus, laoreet nec tincidunt et,  viverra vitae ante.</p>

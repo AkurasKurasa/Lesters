@@ -7,7 +7,7 @@ body {
     min-height: 100vh;
     background-color: var(--primary);
 }
-main {
+#flavors {
     display: grid;
     grid-template-rows: auto;
     height: 100%;

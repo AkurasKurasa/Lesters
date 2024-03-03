@@ -3,7 +3,7 @@ import { useRef } from 'react'
 import Card from '../components/Card.jsx'
 import Footer from '../components/Footer.jsx'
 import Sidecart from '../components/Sidecart.jsx'
-import ProductModal from '../components/ProductModal.jsx'
+import { Link } from 'react-router-dom'
 
 function Home() {
 
@@ -13,7 +13,7 @@ function Home() {
     <>
 
       <Sidecart ref={sidecartRef}/>
-      <main>
+      <main id='home'>
         <Highlight reference={sidecartRef} />
         <Best/>
         <Achievements />
@@ -31,11 +31,11 @@ function Highlight(props) {
 
   return (
     <>
-      <nav className="navigation-bar">
+      <nav className="home-navigation-bar">
             <h1 className="logo">LESTERS</h1>
             <ul>
-                <li>Home</li>
-                <li>Flavors</li>
+                <Link to="/">Home</Link>
+                <Link to="/flavors">Flavors</Link>
                 <li>Contact</li>
                 <li onClick={() => props.reference.current.toggle()}>
                     <svg width="32px" height="32px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -71,13 +71,13 @@ function Best(props) {
 
         <div className="bestItems__container">
 
-            <Card name='CHOCOLATE' id='chocolate'/>
-            <Card name="COOKIES N' CREAM" id='cookies-and-cream'/>
-            <Card name='STRAWBERRY' id='strawberry'/>
+            <Card name='CHOCOLATE' id='chocolate' image="https://iambaker.net/wp-content/uploads/2022/06/chocolate-ice-cream.jpg"/>
+            <Card name="COOKIES N' CREAM" id='cookies-and-cream' image="https://sugarspunrun.com/wp-content/uploads/2023/08/Cookies-and-cream-ice-cream-3-of-8.jpg" />
+            <Card name='STRAWBERRY' id='strawberry' image="https://www.livinglou.com/wp-content/uploads/2013/06/the-best-homemade-strawberry-ice-cream.jpg"/>
 
         </div>
 
-        <a href="">Find More flavors</a>
+        <Link to="/flavors">Find More flavors</Link>
 
       </section>
     
