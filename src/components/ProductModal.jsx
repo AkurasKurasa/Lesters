@@ -6,6 +6,10 @@ const ProductModal = forwardRef((props, ref) => {
 
     const [ cartItems, setCartItems ] = useContext(CartContext)
 
+    function add() {
+      setCartItems([...cartItems, {name: props.name, price: 200.00}])
+    }
+
     return (
 
       <>
@@ -29,7 +33,7 @@ const ProductModal = forwardRef((props, ref) => {
                           <span className="quantity-decrease">-</span>
                           0
                       </div>
-                      <button className='add-to-cart-btn'>ADD TO CART</button>
+                      <button className='add-to-cart-btn' onClick={add}>ADD TO CART</button>
                       <button className='order-btn'>ORDER</button>
 
                   </div>
