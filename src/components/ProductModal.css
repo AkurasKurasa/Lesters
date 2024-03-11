@@ -48,6 +48,29 @@ button {
 
     background-position: center;
     background-size: cover;
+    position: relative;
+
+}
+
+.modal-images > .previous-image {
+
+    position: absolute;
+    left: 0;
+    width: 50%;
+    height: 100%;
+
+    cursor: pointer;
+
+}
+
+.modal-images > .next-image {
+
+    position: absolute;
+    right: 0;
+    width: 50%;
+    height: 100%;
+
+    cursor: pointer;
 
 }
 

@@ -32,7 +32,8 @@
 .item-info-container > span {
     height: 56px;
     width: 56px;
-    background-color: lightgray;
+    background-size: cover;
+    background-position: center;
 }
 .item-info-container > h1 {
     font-family: var(--lato);

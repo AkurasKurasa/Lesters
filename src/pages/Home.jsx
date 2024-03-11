@@ -71,9 +71,20 @@ function Best(props) {
 
         <div className="bestItems__container">
 
-            <Card name='CHOCOLATE' id='chocolate' image="https://iambaker.net/wp-content/uploads/2022/06/chocolate-ice-cream.jpg"/>
-            <Card name="COOKIES N' CREAM" id='cookies-and-cream' image="https://sugarspunrun.com/wp-content/uploads/2023/08/Cookies-and-cream-ice-cream-3-of-8.jpg" />
-            <Card name='STRAWBERRY' id='strawberry' image="https://www.livinglou.com/wp-content/uploads/2013/06/the-best-homemade-strawberry-ice-cream.jpg"/>
+            <Card name='CHOCOLATE' id='chocolate' image={["https://iambaker.net/wp-content/uploads/2022/06/chocolate-ice-cream.jpg", 
+                                                          "https://www.yourhomebasedmom.com/wp-content/uploads/2023/08/CHOCOLATE-ice-cream-9.jpg",
+                                                          "https://carveyourcraving.com/wp-content/uploads/2021/06/chocolate-icecream-in-an-icecream-maker.jpg",
+                                                          "https://www.modernhoney.com/wp-content/uploads/2020/09/No-Churn-Chocolate-Chunk-Ice-Cream-5-edit-scaled.jpg"]}/>
+
+            <Card name="COOKIES N' CREAM" id='cookies-and-cream' image={["https://sugarspunrun.com/wp-content/uploads/2023/08/Cookies-and-cream-ice-cream-3-of-8.jpg",
+                                                                        "https://www.yourhomebasedmom.com/wp-content/uploads/2020/06/cookies-and-cream-ice-cream-7.jpg",
+                                                                        "https://www.chewoutloud.com/wp-content/uploads/2013/08/cookies-and-cream-in-white-bowl.jpg",
+                                                                        "https://images.squarespace-cdn.com/content/v1/525d98f0e4b0f07bb3deb091/1595432470418-SNATOFZCZD5D99KYRFID/Classic+Cookies+and+Cream+Ice+Cream"]} />
+
+            <Card name='STRAWBERRY' id='strawberry' image={["https://www.livinglou.com/wp-content/uploads/2013/06/the-best-homemade-strawberry-ice-cream.jpg",
+                                                            "https://www.budgetbytes.com/wp-content/uploads/2022/06/No-Churn-Strawberry-Ice-Cream-V2.jpg",
+                                                            "https://foodduchess.com/wp-content/uploads/2020/06/Strawberry-Cheesecake-Ice-Cream00039-1229x1536.jpg",
+                                                            "https://getinspiredeveryday.com/wp-content/uploads/2023/06/Strawberry-Cheesecake-Ice-Cream-Get-Inspired-Everyday-11.jpg"]}/>
 
         </div>
 

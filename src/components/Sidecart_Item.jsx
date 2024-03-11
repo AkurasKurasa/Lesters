@@ -13,9 +13,9 @@ function Sidecart_Item (props) {
 
         <div className='item-container'>
                     <div className='item-info-container'>
-                        <span></span>
+                        <span style={{backgroundImage: `url(${props.image})`}}></span>
                         <h1>{props.name}</h1>
-                        <h2 className="item-price">{props.price}</h2>
+                        <h2 className="item-price">{props.price.toFixed(2)}</h2>
                         <div 
                         className={ isSelected ? 'item-selected' : 'item-select' }
                         onClick={ () => { setIsSelected(!isSelected) } }>
