@@ -1,5 +1,7 @@
-*, *::before, *::after {
-  box-sizing : inherit;
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
   margin: 0;
   padding: 0;
 }
@@ -18,7 +20,6 @@ main#home {
   position: relative;
 }
 .home-navigation-bar {
-
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -29,24 +30,20 @@ main#home {
   width: 100vw;
 
   z-index: 1;
-
 }
 
-.logo { 
-
+.logo {
   color: transparent;
   margin-left: 4rem;
-  font-family: "Lot"; 
+  font-family: "Lot";
   font-size: 35px;
 
   height: fit-content;
 
   -webkit-text-stroke: 3px black;
-
 }
 
 .home-navigation-bar > ul {
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -63,47 +60,39 @@ main#home {
   height: fit-content;
 
   margin-right: 17rem;
-
 }
 
-.home-navigation-bar li { 
-
+.home-navigation-bar li {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: row;
   transition: all 0.2s;
-
 }
 
 .home-navigation-bar li:hover {
-
   cursor: pointer;
   color: #555;
-
 }
 
 .cart-item-count {
-
-  background-color: black; 
-  width: 20px; 
-  height: 20px; 
-  border-radius: 100%; 
-  display: flex; 
-  align-items: center; 
-  justify-content: center; 
-  color: white; 
-  font-family:var(--lato); 
+  background-color: black;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: var(--lato);
   font-size: 11px;
-
 }
 
 .theme-toggle-container {
-
-  height: 28px; 
-  width: 28px; 
-  background-color: transparent; 
-  border: 2px black solid; 
+  height: 28px;
+  width: 28px;
+  background-color: transparent;
+  border: 2px black solid;
   border-radius: 100%;
 }
 .layout__header {
@@ -210,7 +199,7 @@ main#home {
   font-size: 6rem;
 }
 .achievements > h2 {
-  color: #F2CC8F;
+  color: #f2cc8f;
   font-family: var(--leagueSpartan);
   font-size: 2.5rem;
   white-space: nowrap;
@@ -231,36 +220,50 @@ main#home {
   transform: rotate(-45deg);
 }
 .rect-1 {
-  left: -225px; top: 0; background-color: #F4F1DE;
+  left: -225px;
+  top: 0;
+  background-color: #f4f1de;
 }
 .rect-2 {
-  left: -175px; top: 0; background-color: #F2CC8F;
+  left: -175px;
+  top: 0;
+  background-color: #f2cc8f;
 }
 .rect-3 {
-  left: -125px; top: 0; background-color: #F4F1DE;
+  left: -125px;
+  top: 0;
+  background-color: #f4f1de;
 }
 .rect-4 {
-  right: -225px; bottom: 0; background-color: #F2CC8F;
+  right: -225px;
+  bottom: 0;
+  background-color: #f2cc8f;
 }
 .rect-5 {
-  right: -175px; bottom: 0; background-color: #F4F1DE;
+  right: -175px;
+  bottom: 0;
+  background-color: #f4f1de;
 }
 .rect-6 {
-  right: -125px; bottom: 0; background-color: #F2CC8F;
+  right: -125px;
+  bottom: 0;
+  background-color: #f2cc8f;
 }
 .popsicle {
   content: url("../assets/popsicle.svg");
-  right: 215px; bottom: -50px;
+  right: 215px;
+  bottom: -50px;
 }
 .ice-cream {
   content: url("../assets/ice-cream-cone.svg");
-  left: 100px; bottom: -80px;
+  left: 100px;
+  bottom: -80px;
 }
 .layout__years > h1 {
   font-family: var(--leagueSpartan);
   font-weight: 900;
   font-size: 86px;
-  color: #F4F1DE;
+  color: #f4f1de;
   text-transform: uppercase;
 }
 .layout__years > h2 {
@@ -268,7 +271,7 @@ main#home {
   font-weight: 800;
   font-size: 28px;
   letter-spacing: 9px;
-  color: #F2CC8F;
+  color: #f2cc8f;
   text-transform: uppercase;
 }
 .layout__years > img {
@@ -282,7 +285,7 @@ main#home {
   flex-direction: column;
 }
 .layout__crave > h1 {
-  font-family: 'Smooth Fantasy';
+  font-family: "Smooth Fantasy";
   font-size: 3rem;
 }
 .crave-container {
@@ -317,7 +320,7 @@ main#home {
   height: 450px;
 }
 .layout__newsletter {
-  background-color: #F2CC8F;
+  background-color: #f2cc8f;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -334,7 +337,7 @@ main#home {
 .layout__newsletter > h1::after {
   position: absolute;
   top: 30px;
-  content: url('../assets/arrow.svg');
+  content: url("../assets/arrow.svg");
   margin-left: 10px;
 }
 .newsletter-container {
@@ -364,7 +367,7 @@ main#home {
   height: 43px;
   border: 4px white solid;
   outline: none;
-  background-color: #F2CC8F;
+  background-color: #f2cc8f;
   font-family: var(--leagueSpartan);
   font-size: 16px;
   padding: 0 0.5rem;
@@ -372,7 +375,7 @@ main#home {
 .newsletter-container > form input:focus {
   color: black;
   background-color: white;
-  content: '';
+  content: "";
 }
 .newsletter-container > form input::-moz-placeholder {
   color: black;

@@ -1,31 +1,37 @@
-import { useEffect, useState } from 'react'
-import '../components/Card.css'
-import ProductModal from './ProductModal'
+import { useState } from "react";
+import { PropTypes } from 'prop-types'
+import "../components/Card.css";
+import ProductModal from "./ProductModal";
 
-function Card(props) {
+const Card = (props) => {
+  const [isPressed, setIsPressed] = useState(false);
 
-    const [isPressed, setIsPressed] = useState(false)
+  function toggle() {
+    setIsPressed(!isPressed);
+  }
 
-    function toggle() {
-
-      setIsPressed(!isPressed)
-
-    }
-
-    return (
-        <>
-          { isPressed && <ProductModal toggle={toggle} name={props.name} image={props.image} /> }
-          <article className="best-item" id={props.id}>
-              <section className="best-item-image"></section>
-                <section className="best-item-bottom-portion regular">
-                  <span className="best-item-name">{props.name}</span>
-                  <button className="best-item-button" onClick={toggle}>ORDER</button>
-                </section>
-          </article>
-        </>
-
-    )
-
+  return (
+    <>
+      {isPressed && (
+        <ProductModal toggle={toggle} name={props.name} image={props.image} />
+      )}
+      <article className="best-item" id={props.id}>
+        <section className="best-item-image"></section>
+        <section className="best-item-bottom-portion regular">
+          <span className="best-item-name">{props.name}</span>
+          <button className="best-item-button" onClick={toggle}>
+            ORDER
+          </button>
+        </section>
+      </article>
+    </>
+  );
 }
 
-export default Card
+Card.propTypes = {
+  name: PropTypes.string,
+  image: PropTypes.string,
+  id: PropTypes.string
+}
+
+export default Card;

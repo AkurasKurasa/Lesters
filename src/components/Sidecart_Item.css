@@ -1,76 +1,76 @@
 .item-container {
-    width: inherit;
-    height: 64px;
+  width: inherit;
+  height: 64px;
 
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 
-    position: relative;
+  position: relative;
 
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 .item-container::after {
-    content: '';
-    position: absolute;
-    height: 1px;
-    width: 460px;
-    position: absolute;
-    bottom: -1rem;
-    background-color: #C4C4C4;
-
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 460px;
+  position: absolute;
+  bottom: -1rem;
+  background-color: #c4c4c4;
 }
 .item-info-container {
-    width: 245px;
-    height: 64px;
+  width: 245px;
+  height: 64px;
 
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 .item-info-container > span {
-    height: 56px;
-    width: 56px;
-    background-size: cover;
-    background-position: center;
+  height: 56px;
+  width: 56px;
+  background-size: cover;
+  background-position: center;
 }
 .item-info-container > h1 {
-    font-family: var(--lato);
-    font-weight: 500;
-    font-size: 12px;
-    letter-spacing: 3px;
-    margin-left: 1.2rem;
-    color: #868686;
+  font-family: var(--lato);
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 3px;
+  margin-left: 1.2rem;
+  color: #868686;
 }
 .item-price {
-    font-family: var(--lato);
-    font-size: 12px;
-    font-weight: 900;
-    letter-spacing: 2px;
+  font-family: var(--lato);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 2px;
 
-    position: absolute;
-    left: 60%;
-}   
+  position: absolute;
+  left: 60%;
+}
 .item-select {
-    width: 12px;
-    height: 12px;
-    background-color: transparent;
-    border: 2px #C4C4C4 solid;
+  width: 12px;
+  height: 12px;
+  background-color: transparent;
+  border: 2px #c4c4c4 solid;
 
-    position: absolute;
-    right: 5%;
+  position: absolute;
+  right: 5%;
 }
 .item-selected {
-    width: 12px;
-    height: 12px;
+  width: 12px;
+  height: 12px;
 
-    border: 2px #89CC61 solid;
-    background-color: #EAF4E1;
+  border: 2px #89cc61 solid;
+  background-color: #eaf4e1;
 
-    position: absolute;
-    right: 5%;
+  position: absolute;
+  right: 5%;
 }
-.item-select:hover, .item-selected:hover {
-    cursor: pointer;
+.item-select:hover,
+.item-selected:hover {
+  cursor: pointer;
 }

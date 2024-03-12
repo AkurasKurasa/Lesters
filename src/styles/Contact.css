@@ -1,112 +1,118 @@
 html {
-    height: auto;
-    box-sizing: border-box;
-    overflow-x: hidden;
+  height: auto;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 body {
-    min-height: 100vh;
-    background-color: var(--primary);
+  min-height: 100vh;
+  background-color: var(--primary);
 }
 main {
-    display: grid;
-    grid-template-rows: 1000px;
-    height: 100%;
-    position: relative;
+  display: grid;
+  grid-template-rows: 1000px;
+  height: 100%;
+  position: relative;
 }
-input::placeholder, textarea::placeholder { 
-    font-weight: 700; 
-    font-family: var(--lato);
-    font-size: 12px;
+input::placeholder,
+textarea::placeholder {
+  font-weight: 700;
+  font-family: var(--lato);
+  font-size: 12px;
 }
 .layout_contact {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex-direction: column;
-    position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  position: relative;
 }
 .bookmark {
-    position: absolute;
-    left: 65px;
-    width: 70px;
-    height: 300px;
-    background: #F2CC8F;
-    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 50% calc(100% - 20px), 0% 100%, 0% 0%);
+  position: absolute;
+  left: 65px;
+  width: 70px;
+  height: 300px;
+  background: #f2cc8f;
+  clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    100% 100%,
+    50% calc(100% - 20px),
+    0% 100%,
+    0% 0%
+  );
 }
 .layout_contact > h1 {
-    font-family: var(--leagueSpartan);
-    font-size: 48px;
-    font-weight: 900;
-    letter-spacing: 5px;
-    margin-top: 5rem;
-    margin-bottom: 0rem;
+  font-family: var(--leagueSpartan);
+  font-size: 48px;
+  font-weight: 900;
+  letter-spacing: 5px;
+  margin-top: 5rem;
+  margin-bottom: 0rem;
 }
 .layout_contact > h2 {
-    font-family: var(--lato);
-    font-weight: 400;
-    font-size: 20px;
-    color: #868686;
-    letter-spacing: 3px;
-    margin-bottom: 8rem;
+  font-family: var(--lato);
+  font-weight: 400;
+  font-size: 20px;
+  color: #868686;
+  letter-spacing: 3px;
+  margin-bottom: 8rem;
 }
 .contacts-container {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    height: 32px;
-    width: 950px;
-    gap: 1rem;
-    margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 32px;
+  width: 950px;
+  gap: 1rem;
+  margin-bottom: 1rem;
 }
 .contacts-container > h3 {
-    font-family: var(--lato);
-    font-weight: 300;
-    font-size: 20px;
-    letter-spacing: 2px;
-    margin-left: 1rem;
+  font-family: var(--lato);
+  font-weight: 300;
+  font-size: 20px;
+  letter-spacing: 2px;
+  margin-left: 1rem;
 }
 .contact-option {
-    height: 32px;
-    width: 32px;
-    border-radius: 100%;
-    background-color: gray;
+  height: 32px;
+  width: 32px;
+  border-radius: 100%;
+  background-color: gray;
 }
 .form-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    width: 950px;
-    height: 500px;
-    background-color: #E5D2B3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 950px;
+  height: 500px;
+  background-color: #e5d2b3;
 }
 .input-container {
-    width: 800px;
-    height: 35px;
-    padding: 0;
-    
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  width: 800px;
+  height: 35px;
+  padding: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .form-submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  font-family: var(--leagueSpartan);
+  font-weight: 800;
+  font-size: 18px;
 
-    font-family: var(--leagueSpartan);
-    font-weight: 800;
-    font-size: 18px;
+  letter-spacing: 2px;
 
-    letter-spacing: 2px;
+  border: 4px black solid;
+  height: 50px;
+  width: 140px;
 
-    border: 4px black solid;
-    height: 50px;
-    width: 140px;
+  background-color: transparent;
 
-    background-color: transparent;
-
-    margin-top: 3rem;
-
+  margin-top: 3rem;
 }

@@ -1,237 +1,200 @@
 button {
-
-    border: none;
-    outline: none;
-
+  border: none;
+  outline: none;
 }
 
 .overlay {
+  width: 100vw;
+  height: 100vh;
 
-    width: 100vw;
-    height: 100vh;
+  background-color: rgb(99, 99, 99, 0.7);
 
-    background-color: rgb(99,99,99, 0.7);
+  position: fixed;
+  top: 0;
+  left: 0;
 
-    position: fixed;
-    top: 0;
-    left: 0;
-
-    z-index: 10;
-
+  z-index: 10;
 }
 
 .modal {
+  position: relative;
+  top: calc(50% - (720px / 2));
+  left: calc(50% - (1200px / 2));
 
-    position: relative;
-    top: calc(50% - (720px / 2));
-    left: calc(50% - (1200px / 2));
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+  border: 1px black solid;
 
-    border: 1px black solid;
+  background-color: snow;
 
-    background-color: snow;
+  height: 720px;
+  width: 1200px;
 
-    height: 720px;
-    width: 1200px;
+  padding: 5rem 4rem;
 
-    padding: 5rem 4rem;
+  z-index: 6;
 
-    z-index: 6;
-
-    transition: all 0.5s;
-
+  transition: all 0.5s;
 }
 
 .modal-images {
-
-    background-position: center;
-    background-size: cover;
-    position: relative;
-
+  background-position: center;
+  background-size: cover;
+  position: relative;
 }
 
 .modal-images > .previous-image {
+  position: absolute;
+  left: 0;
+  width: 50%;
+  height: 100%;
 
-    position: absolute;
-    left: 0;
-    width: 50%;
-    height: 100%;
-
-    cursor: pointer;
-
+  cursor: pointer;
 }
 
 .modal-images > .next-image {
+  position: absolute;
+  right: 0;
+  width: 50%;
+  height: 100%;
 
-    position: absolute;
-    right: 0;
-    width: 50%;
-    height: 100%;
-
-    cursor: pointer;
-
+  cursor: pointer;
 }
 
 .modal-info {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
 
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    flex-direction: column;
-
-    padding-left: 3rem;
-    
+  padding-left: 3rem;
 }
 
 .product-name {
+  font-family: var(--leagueSpartan);
+  font-size: 48px;
+  font-weight: 900;
+  letter-spacing: 5px;
 
-    font-family: var(--leagueSpartan);
-    font-size: 48px;
-    font-weight: 900;
-    letter-spacing: 5px;
-
-    white-space: nowrap;
-
+  white-space: nowrap;
 }
 
 .product-info {
+  font-family: var(--lato);
+  font-size: 16px;
+  font-weight: 400;
+  color: #868686;
 
-    font-family: var(--lato);
-    font-size: 16px;
-    font-weight: 400;
-    color: #868686;
+  text-align: justify;
 
-    text-align: justify;
-
-    line-height: 28px;
-    margin-bottom: 1rem;
-
+  line-height: 28px;
+  margin-bottom: 1rem;
 }
 
 .product-price {
-
-    font-family: var(--lato);
-    font-size: 22px;
-    font-weight: 300;
-    letter-spacing: 2px;
+  font-family: var(--lato);
+  font-size: 22px;
+  font-weight: 300;
+  letter-spacing: 2px;
 }
 
 .controls-container {
-    height: 56px;
-    width: 100%;
+  height: 56px;
+  width: 100%;
 
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5rem;
 
-    margin-top: 5rem;
-
+  margin-top: 5rem;
 }
 
 .quantity-input {
+  width: 133px;
+  height: 56px;
 
-    width: 133px;
-    height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  font-family: var(--lato);
+  font-size: 16px;
+  font-weight: 300;
 
-    font-family: var(--lato);
-    font-size: 16px;
-    font-weight: 300;
+  position: relative;
 
-    position: relative;
-
-    border: 1px black solid;
-
+  border: 1px black solid;
 }
 
 .quantity-input > span {
-
-    font-family: var(--lato);
-    font-size: 18px;    
-    color: #868686;
-
+  font-family: var(--lato);
+  font-size: 18px;
+  color: #868686;
 }
 
 .quantity-increase {
-
-    position: absolute;
-    right: 10%;
-
+  position: absolute;
+  right: 10%;
 }
 
 .quantity-decrease {
-
-    position: absolute;
-    left: 10%;
-
+  position: absolute;
+  left: 10%;
 }
 
 .controls-container > button {
-
-    height: fit-content;
-    padding: 0.5rem;
-
+  height: fit-content;
+  padding: 0.5rem;
 }
 
 .add-to-cart-btn {
+  background-color: black;
 
-    background-color: black;
+  border: 2px black solid;
 
-    border: 2px black solid;
+  font-family: var(--leagueSpartan);
+  font-size: 16px;
+  font-weight: 800;
 
-    
-    font-family: var(--leagueSpartan);
-    font-size: 16px;
-    font-weight: 800;
+  letter-spacing: 1px;
 
-    letter-spacing: 1px;
+  color: white;
 
-    color: white;
+  width: 130px;
 
-    width: 130px;
-
-    margin-left: 0.5rem;
-
+  margin-left: 0.5rem;
 }
 
 .order-btn {
+  background-color: transparent;
 
-    background-color: transparent;
+  border: 2px black solid;
 
-    border: 2px black solid;
-    
-    font-family: var(--leagueSpartan);
-    font-size: 16px;
-    font-weight: 800;
+  font-family: var(--leagueSpartan);
+  font-size: 16px;
+  font-weight: 800;
 
-    width: 85px;
+  width: 85px;
 
-    letter-spacing: 1px;
+  letter-spacing: 1px;
 
-    color: black;
-
+  color: black;
 }
 
 .order-price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  font-family: var(--lato);
+  font-size: 20px;
+  font-weight: 400;
 
-    font-family: var(--lato);
-    font-size: 20px;
-    font-weight: 400;
+  width: 133px;
 
-    width: 133px;
+  margin-top: 0.5rem;
 
-    margin-top: 0.5rem;
-
-    letter-spacing: 2px;
-
+  letter-spacing: 2px;
 }
