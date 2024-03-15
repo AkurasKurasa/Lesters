@@ -33,14 +33,14 @@ const Sidecart = forwardRef((props, ref) => {
     },
   }));
 
-  function addItemToCart(name, price) {
+  function addItemToCart(name, price, image) {
     const new_temporary_list = temporaryList;
     if (
       !new_temporary_list.includes(
         new_temporary_list.find((p) => p.name === name),
       )
     )
-      new_temporary_list.push({ name: name, price: price });
+      new_temporary_list.push({ name: name, price: price, image: image });
     setTemporaryList(new_temporary_list);
     console.log(temporaryList);
   }

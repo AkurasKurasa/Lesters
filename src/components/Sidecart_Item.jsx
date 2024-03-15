@@ -1,12 +1,12 @@
-import { useLayoutEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { PropTypes } from 'prop-types'
 import "../components/Sidecart_Item.css";
 
 const Sidecart_Item = (props) => {
   const [isSelected, setIsSelected] = useState(false);
 
-  useLayoutEffect(() => {
-    isSelected ? props.remove(props.name) : props.add(props.name, props.price);
+  useEffect(() => {
+    isSelected ? props.remove(props.name) : props.add(props.name, props.price, props.image);
   }, [isSelected]);
 
   return (

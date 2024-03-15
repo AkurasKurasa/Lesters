@@ -110,10 +110,16 @@ const ProductModal = forwardRef((props) => {
               <button
                 className="add-to-cart-btn"
                 onClick={() => add(props.name)}
+                disabled={(quantity == 0)}
               >
                 ADD TO CART
               </button>
-              <button className="order-btn">ORDER</button>
+              <button 
+                className="order-btn"
+                disabled={(quantity == 0)}
+              >
+                ORDER
+              </button>
             </div>
             <h2 className="order-price">₱{price.toFixed(2)}</h2>
           </section>

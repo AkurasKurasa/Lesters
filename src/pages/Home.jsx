@@ -73,7 +73,7 @@ function Highlight(props) {
   );
 }
 
-function Best(props) {
+function Best() {
   return (
     <section className="layout__best">
       <h1>Try Our Best Sellers</h1>
