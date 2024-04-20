@@ -30,7 +30,7 @@ const Card = (props) => {
 
 Card.propTypes = {
   name: PropTypes.string,
-  image: PropTypes.string,
+  image: PropTypes.array,
   id: PropTypes.string
 }
 

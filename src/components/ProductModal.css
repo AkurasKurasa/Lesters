@@ -137,11 +137,15 @@ button {
 .quantity-increase {
   position: absolute;
   right: 10%;
+  cursor: pointer;
+  user-select: none;
 }
 
 .quantity-decrease {
   position: absolute;
   left: 10%;
+  cursor: pointer;
+  user-select: none;
 }
 
 .controls-container > button {

@@ -3,8 +3,9 @@ import NavBar from "../components/Navbar.jsx";
 import Card from "../components/Card.jsx";
 import Footer from "../components/Footer.jsx";
 
-import { useRef } from "react";
+import { useContext, useRef, useState } from "react";
 import Sidecart from "../components/Sidecart.jsx";
+import { ItemsContext } from "./App.jsx";
 
 function Flavors() {
   const sidecartRef = useRef();
@@ -23,31 +24,84 @@ function Flavors() {
 }
 
 function Menu() {
+
+  const [items, setItems] = useContext(ItemsContext)
+
+  const [bestFilter, setBestFilter] = useState(false)
+  const [iceCreamFilter, setIceCreamFilter] = useState(false)
+  const [sherbetFilter, setSherbetFilter] = useState(false)
+
+  const best = items.filter((item) => { if ( item.best ) return item })
+  const ice_cream = items.filter((item) => { if ( item.isIceCream ) return item })
+  const sherbet = items.filter((item) => { if ( item.isSherbet ) return item })
+
   return (
     <section className="layout-flavors">
       <h1>FLAVORS</h1>
       <div className="flavors-options">
-        <span className="current-tab">BEST SELLERS</span>
-        <span>ICE CREAM</span>
-        <span>SHERBET</span>
+        <span 
+          className={ bestFilter ? "chosen-tab" : "" } 
+          onClick={() => {
+              setBestFilter(!bestFilter)
+              setIceCreamFilter(false)
+              setSherbetFilter(false)                                                      
+          }}>BEST SELLERS</span>
+        <span 
+          className={ iceCreamFilter ? "chosen-tab" : "" } 
+          onClick={() => {
+              setIceCreamFilter(!iceCreamFilter)
+              setBestFilter(false)
+              setSherbetFilter(false)
+          }}>ICE CREAM</span>
+        <span 
+          className={ sherbetFilter ? "chosen-tab" : "" } 
+          onClick={() => {
+              setSherbetFilter(!sherbetFilter)
+              setBestFilter(false)
+              setIceCreamFilter(false)
+          }}>SHERBET</span>
       </div>
       <div className="divider"></div>
       <div className="flavors-container">
-        <Card name="COOKIES N' CREAM" id="cookies-and-cream" />
-        <Card name="MELON" id="melon" />
-        <Card name="BUKO" id="buko" />
+        {(!bestFilter && !iceCreamFilter && !sherbetFilter) &&
+          items.map((item) => (
+            <Card 
+              name={item.name}
+              id={item.id}
+              image={item.image}
+            />
+        ))}
 
-        <Card name="BUKO PANDAN" id="buko-pandan" />
-        <Card name="LANGKA" id="langka" />
-        <Card name="UBE" id="ube" />
+        {bestFilter && 
+          best.map((item) => (
+            <Card 
+              name={item.name}
+              id={item.id}
+              image={item.image}
+            />
+          ))
+        }
 
-        <Card name="MANGO" id="mango" />
-        <Card name="MACAPUNO" id="macapuno" />
-        <Card name="AVOCADO" id="avocado" />
+        {iceCreamFilter &&
+          ice_cream.map((item) => (
+            <Card 
+              name={item.name}
+              id={item.id}
+              image={item.image}
+            />
+          ))
+        }
 
-        <Card name="CHOCOLATE" id="chocolate" />
-        <Card name="CHEESE" id="cheese" />
-        <Card name="STRAWBERRY" id="strawberry" />
+        {sherbetFilter &&
+          sherbet.map((item) => (
+            <Card 
+              name={item.name}
+              id={item.id}
+              image={item.image}
+            />
+          ))
+        }
+        
       </div>
     </section>
   );

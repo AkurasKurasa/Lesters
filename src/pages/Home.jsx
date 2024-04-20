@@ -37,7 +37,7 @@ function Highlight(props) {
         <ul>
           <Link to="/">Home</Link>
           <Link to="/flavors">Flavors</Link>
-          <li>Contact</li>
+          <Link to="/contact">Contact</Link>
           <li onClick={() => props.reference.current.toggle()}>
             <svg
               width="32px"

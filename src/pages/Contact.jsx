@@ -31,7 +31,7 @@ function Contact() {
           </div>
 
           <form className="form-container">
-            <input
+            {/* <input
               type="text"
               placeholder="Name"
               style={{
@@ -74,7 +74,7 @@ function Contact() {
               }}
             />
 
-            <button className="form-submit">SUBMIT</button>
+            <button className="form-submit">SUBMIT</button> */}
           </form>
         </section>
       </main>

@@ -65,6 +65,21 @@
   background-size: cover;
   background-position: center;
 }
+#buko-sherbet > .best-item-image {
+  background-image: url("https://dimpyskitchen.ph/cdn/shop/products/DIMPYS-10BukoSherbetB.jpg?v=1659278256");
+  background-size: cover;
+  background-position: center;
+}
+#pandan-sherbet > .best-item-image {
+  background-image: url("https://www.kawalingpinoy.com/wp-content/uploads/2020/03/no-buko-pandan-ice-cream-1.jpg");
+  background-size: cover;
+  background-position: center;
+}
+#melon-sherbet > .best-item-image {
+  background-image: url("https://www.healthyseasonalrecipes.com/wp-content/uploads/2022/06/easy-watermelon-sorbet-011.jpg");
+  background-size: cover;
+  background-position: center;
+}
 .best-item-bottom-portion {
   display: flex;
   align-items: center;

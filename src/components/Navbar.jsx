@@ -1,15 +1,19 @@
 import "./Navbar.css";
+import { Link } from "react-router-dom";
 import { PropTypes } from 'prop-types'
+import { useContext } from "react";
+import { CartContext } from "../pages/App";
 
 function NavBar(props) {
+  const [cartItems, setCartItems] = useContext(CartContext)
   return (
     <>
       <nav className="navigation-bar">
         <h1>LESTERS</h1>
         <ul>
-          <li>Home</li>
-          <li>Flavors</li>
-          <li>Contacts</li>
+          <Link to="/">Home</Link>
+          <Link to="/flavors">Flavors</Link>
+          <Link to="/contact">Contact</Link>
           <li onClick={() => props.reference.current.toggle()}>
             <svg
               width="28px"
@@ -26,7 +30,7 @@ function NavBar(props) {
                 strokeLinejoin="round"
               />
             </svg>
-            <div className="cart-item-count">0</div>
+            <div className="cart-item-count">{cartItems.length}</div>
           </li>
           <li>
             <div className="theme-toggle-outer"></div>

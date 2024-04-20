@@ -41,9 +41,17 @@ body {
   font-family: var(--lato);
   font-weight: 400;
   letter-spacing: 1px;
+  padding: 3px 8px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.15s;
 }
-.current-tab {
-  text-decoration: underline;
+.flavors-options > span:hover {
+  background-color: rgba(242, 204, 143, 0.45);
+}
+.chosen-tab {
+  background-color:var(--accent);
+
 }
 .divider {
   width: 85%;
